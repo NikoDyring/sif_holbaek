@@ -1,0 +1,38 @@
+<nav class="bg-orange-500">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-20 items-center justify-between">
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <%= image_tag('sifholbaek.png', class: 'h-12 w-auto') %>
+        </div>
+        <div class="sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <%= link_to "NYHEDER", posts_path, class: "text-white rounded-md px-3 py-3 text-base font-medium nav-link" %>
+            <%= link_to "HOLD", teams_path, class: "text-white hover:underline rounded-md px-3 py-3 text-base font-medium nav-link" %>
+            <%= link_to "KAMPE", matches_path, class: "text-white hover:underline rounded-md px-3 py-3 text-base font-medium nav-link" %>
+            <%= link_to "MIT SIF", "#", class: "text-white hover:underline rounded-md px-3 py-3 text-base font-medium nav-link" %>
+            <%= link_to "SPILLERE", players_path, class: "text-white hover:underline rounded-md px-3 py-3 text-base font-medium nav-link" %>
+            <%= link_to "PARTNERE", "#", class: "text-white hover:underline rounded-md px-3 py-3 text-base font-medium nav-link" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("turbo:load", function() {
+    // Add underline class to active menu item
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(function(navLink) {
+      if (navLink.href === window.location.href) {
+        navLink.classList.add("underline");
+      } else {
+        navLink.classList.remove("underline");
+      }
+    });
+  });
+</script>
+
+
