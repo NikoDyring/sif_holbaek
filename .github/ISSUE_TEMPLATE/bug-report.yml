@@ -1,73 +1,51 @@
-name: 🐞 Bug or error report
-description: Report an anomaly or unexpected behavior with a sample from this repository.
+name: 🐞 Bug rapport
+description: Rapportér en fejl eller uventet adfærd fra systemet.
 labels: ['Needs: Triage :mag:', 'type:bug-suspected']
 
 body:
 - type: markdown
   attributes:
     value: |
-      - [x] Bug
+      - [x] Fejl
 
-      Thank you for reporting a bug! Use the sections below to submit a bug **only** if it's related to samples in this repo.
+      Tak fordi du rapporterer en fejl! Brug nedenstående sektioner til kun at indsende en fejl, hvis den er relateret vores hjemmeside / systemer.
 
-      - Follow our guidance on [How To Create Good Issues](https://github.com/pnp/powerfx-samples/wiki/How-to-Create-Good-Issues).
-      - All bug reports are welcome - we want to fix them!
-      - This repo is maintained by volunteers. Please be courteous and patient. 🙂
-      - Remember to include sufficient details and context.
-      - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
-      - We accept pull requests. If you know how to fix it - go ahead! If you know how to make it - go ahead! If you're unsure how to do a pull request, consider signing up for a free [Sharing is Caring First-Time Contributor](http://aka.ms/sharing-is-caring#pnp-sic-first-time-contributor) session.
+      - Alle fejlrapporter er velkomne - vi vil gerne rette dem!
+      - Systemet og hjemmesiden vedligeholdes af frivillige. Vær venlig og tålmodig. 🙂
+      - Husk at inkludere tilstrækkelige detaljer og kontekst.
+      - Hvis du har flere spørgsmål, forslag eller fejl, skal du indsende dem som separate problemer.
+      - Vi accepterer pull requests. Hvis du ved, hvordan du løser det - gå i gang! Hvis du ved, hvordan du laver det - gå i gang!
 
-      Please provide the following details about the issue you encountered.  *Issues that do not provide the information requested in this form will be flagged as **incomplete** & automatically closed.*
+      Angiv venligst følgende oplysninger om det problem, du stødte på. Problemer, der ikke indeholder de oplysninger, der anmodes om i denne formular, vil blive markeret som ufuldstændige og automatisk lukket.
 
 - type: input
-  id: sample
+  id: location
   validations:
     required: true
   attributes:
-    label: Sample
+    label: Lokation
     description: |
-        Which sample are you having troubles with?
+        Hvilken side har du problemer med?
 
-        Use the sample name or URL. We don't want to be spend all this time diagnosing issues about the wrong sample, do we?
-
-- type: input
-  id: authors
-  validations:
-    required: true
-  attributes:
-    label: Author(s)
-    description: |
-        Who wrote the sample?
-
-        Because of the way this repository is configured, samples authors do not get a notification when you create an issue.
-
-        For the section above **@mention any author of the sample**. Authors' GitHub handle can be found on the main sample documentation page, under the "Solution" section.
-
-        Issues without an @mention will be closed automatically, as authors won't get notified.
-
-        **NOTE:** Don't @mention the repo maintainers, they already get notified.
-
+        Brug sidens navn eller kopier og indsæt URL / link. Vi ønsker ikke at bruge al tiden på at diagnosticere problemer med den forkerte prøve, vel?
 - type: markdown
   attributes:
     value: |
-      Provide a clear & concise description of what the bug is. Please follow our guidance on [How To Create Good Issues](https://github.com/pnp/powerfx-samples/wiki/How-to-Create-Good-Issues) which explains how to apply formatting, adding references & resources, screenshots, etc.
-
-      **Do not attach ZIP files** of your code or compiled projects - instead, please publish your code to a public GitHub repo & post a link to it.
-
+      Giv en klar og præcis beskrivelse af, hvad fejlen er. Du er ligeledes også velkommen til at uploade screenshots, så vi kan se fejlen i praksis.
 - type: textarea
   id: what-happened
   attributes:
-    label: What happened?
-    description: Describe the observed behavior
-    placeholder: Tell us what you see!
+    label: Hvad skete der?
+    description: Beskriv den observerede adfærd
+    placeholder: Fortæl os hvad du så!
   validations:
     required: true
 
 - type: textarea
   id: steps
   attributes:
-    label: Steps to reproduce
-    description: How do you reproduce this? Please provide as much step-by-step detail as possible.
+    label: Steps til at genskabe fejlen
+    description: Hvordan genskaber du dette? Venligst giv så mange detaljer som muligt trin for trin.
     value: |
       1.
       2.
@@ -78,8 +56,8 @@ body:
 - type: textarea
   id: expected
   attributes:
-    label: Expected behavior
-    description: What did you expect to happen when the reproduce steps are followed?
-    placeholder: Tell us what you expected to see!
+    label: Forventet adfærd
+    description: Hvad forventede du der ville ske?
+    placeholder: Fortæl os hvad du havde regnet med hvad der ville ske!
   validations:
     required: true
