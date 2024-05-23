@@ -1,24 +1,27 @@
-# README
+![missing_sif_banner]()
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Maintainability](https://api.codeclimate.com/v1/badges/25af46ea299daf24bb9a/maintainability)](https://codeclimate.com/github/NikoDyring/sif_holbaek/maintainability)
 
-Things you may want to cover:
 
-* Ruby version
+## What is SIF Holbæk?
 
-* System dependencies
+SIF Holbæk is a Danish football club rooted in the charming town of Holbæk on the island of Zealand. The club has a proud tradition of combining sporting ambition with strong social engagement, and with a dedicated team of coaches and volunteers, SIF Holbæk continues to be a vital institution in the local community, where the passion for football thrives.
 
-* Configuration
+## Tech stack
 
-* Database creation
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
+![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 
-* Database initialization
+Integravy runs on the following:
+Server:
+* Cheapest Droplet from DO
 
-* How to run the test suite
+Application:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby 3.3.0
+* Rails 7.1.3
+* NodeJS 22.1.0
 
-* Deployment instructions
+Databases:
 
-* ...
+* Postgres
