@@ -1,4 +1,4 @@
-![missing_sif_banner]()
+![club banner](https://github.com/NikoDyring/sif_holbaek/assets/9385903/c8ed3222-1055-4f9b-a50c-dcb13cf140b6)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/25af46ea299daf24bb9a/maintainability)](https://codeclimate.com/github/NikoDyring/sif_holbaek/maintainability)
 
