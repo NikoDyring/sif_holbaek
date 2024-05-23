@@ -1,6 +1,6 @@
 name: 🐞 Bug rapport
 description: Rapportér en fejl eller uventet adfærd fra systemet.
-labels: ['Needs: Triage :mag:', 'type:bug-suspected']
+labels: ['bug']
 
 body:
 - type: markdown
