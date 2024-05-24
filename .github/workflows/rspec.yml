@@ -1,1 +1,46 @@
-# TO BE IMPLEMENTED
+---
+name: Rspec Tests
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-head:
+    name: 'Build head'
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+      TZ: "Europe/Copenhagen"
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: sif_holbaek_test
+          POSTGRES_PORT: 5432
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Set Rails Master Key
+        run: |
+          echo ${{ secrets.RAILS_MASTER_KEY }} > config/master.key
+      - name: Create database
+        run: |
+          cp config/database-ci.yml config/database.yml
+          bin/rails db:create
+          bin/rails db:schema:load
+      - name: build assets
+        run: rake test:prepare
+      - name: Run Rspec
+        run: RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }} bundle exec rspec --profile --format documentation --order rand
