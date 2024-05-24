@@ -1,9 +1,0 @@
-test:
-    adapter: postgresql
-    pool: 5
-    timeout: 5000
-    encoding: unicode
-    database: sif_holbaek_test
-    host: localhost
-    username: postgres
-    password: postgres
