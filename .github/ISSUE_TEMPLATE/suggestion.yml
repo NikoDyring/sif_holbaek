@@ -1,6 +1,6 @@
 name: 💡 Forslag
 description: Foreslå en forbedring for at gøre en af vores eksempler endnu bedre
-labels: ['Behov: Triage :mag:', 'type:forbedring']
+labels: ['enhancement :rocket:']
 
 body:
 - type: markdown
