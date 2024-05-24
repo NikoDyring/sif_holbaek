@@ -56,12 +56,12 @@ group :development do
   gem 'ed25519'
 
   # Rubocop
-  gem 'rubocop', require: false
-  gem 'rubocop-capybara', require: false
-  gem 'rubocop-factory_bot', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'rubocop-rspec_rails', require: false
+  gem 'rubocop'
+  gem 'rubocop-capybara'
+  gem 'rubocop-factory_bot'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
+  gem 'rubocop-rspec_rails'
 end
 
 group :test do
@@ -75,5 +75,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'vcr'
   gem 'webmock'
-  gem 'simplecov', require: false
+  gem 'simplecov'
 end
