@@ -25,3 +25,7 @@ Application:
 Databases:
 
 * Postgres
+
+Test suite:
+
+* Rspec
