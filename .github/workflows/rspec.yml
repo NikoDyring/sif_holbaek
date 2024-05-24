@@ -38,8 +38,7 @@ jobs:
       - name: Create database
         run: |
           cp config/database-ci.yml config/database.yml
-          bin/rails db:create
-          bin/rails db:schema:load
+          bin/rails db:migrate
       - name: build assets
         run: rake test:prepare
       - name: Run Rspec
