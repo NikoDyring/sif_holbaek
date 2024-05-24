@@ -15,10 +15,11 @@ This repository contains the website / administration of our club. Which means m
 
 ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
 ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+![Digital Ocean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white)
 
-Integravy runs on the following:
-Server:
-* Cheapest Droplet from DO
+SIF Holbæk runs on the following:  
+  
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=f973e0b8a984&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 Application:
 
