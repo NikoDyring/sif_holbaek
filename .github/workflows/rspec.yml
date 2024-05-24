@@ -37,9 +37,6 @@ jobs:
           echo ${{ secrets.RAILS_MASTER_KEY }} > config/master.key
       - name: Create database
         run: |
-          cp config/database-ci.yml config/database.yml
           bin/rails db:migrate
-      - name: build assets
-        run: rake test:prepare
       - name: Run Rspec
         run: RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }} bundle exec rspec --profile --format documentation --order rand
