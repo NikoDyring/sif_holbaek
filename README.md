@@ -7,6 +7,10 @@
 
 SIF Holbæk is a Danish football club rooted in the charming town of Holbæk on the island of Zealand. The club has a proud tradition of combining sporting ambition with strong social engagement, and with a dedicated team of coaches and volunteers, SIF Holbæk continues to be a vital institution in the local community, where the passion for football thrives.
 
+### This repository
+
+This repository contains the website / administration of our club. Which means most of the documentation / processes you'll find will be in danish. With that said, code will be in english for being able to extend the code in the future as well as other volunteers being able to contribute.
+
 ## Tech stack
 
 ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
