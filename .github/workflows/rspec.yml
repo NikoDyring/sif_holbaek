@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-head:
-    name: 'Build head'
+    name: 'Run Rspec Suite'
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
