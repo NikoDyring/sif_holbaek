@@ -26,6 +26,7 @@ Application:
 * Ruby 3.3.0
 * Rails 7.1.3
 * NodeJS 22.1.0
+* Bootstrap 5
 
 Databases:
 
