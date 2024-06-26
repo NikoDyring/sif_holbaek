@@ -1,12 +1,12 @@
-name: codecoverage
+name: Upload CodeCoverage to CodeClimate
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
-  build:
+  build_and_upload:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
