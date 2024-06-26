@@ -8,6 +8,8 @@ ENV['RAILS_ENV'] ||= 'test'
 
 if ENV['RAILS_ENV'] == 'test'
   require 'simplecov'
+  require 'simplecov_json_formatter'
+  SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
   SimpleCov.start 'rails'
 end
 

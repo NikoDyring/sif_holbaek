@@ -416,6 +416,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   simplecov
+  simplecov_json_formatter
   sprockets-rails
   stimulus-rails
   turbo-rails

@@ -74,6 +74,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  gem 'simplecov_json_formatter'
   gem 'vcr'
   gem 'webmock'
 end
