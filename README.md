@@ -17,7 +17,7 @@ This repository contains the website / administration of our club. Which means m
 ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 ![Digital Ocean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white)
 
-SIF Holbæk runs on the following:  
+SIF Holbæk runs on droplets:  
   
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=f973e0b8a984&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
@@ -26,6 +26,7 @@ Application:
 * Ruby 3.3.0
 * Rails 7.1.3
 * NodeJS 22.1.0
+* Bootstrap 5
 
 Databases:
 

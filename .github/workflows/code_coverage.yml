@@ -1,0 +1,50 @@
+name: Upload CodeCoverage to CodeClimate
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_upload:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+      TZ: "Europe/Copenhagen"
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: sif_holbaek_test
+          POSTGRES_PORT: 5432
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Setup Code Climate test-reporter
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+          ./cc-test-reporter before-build
+      - name: Set Rails Master Key
+        run: |
+          echo ${{ secrets.RAILS_MASTER_KEY }} > config/master.key
+      - name: Create database
+        run: |
+          bin/rails db:migrate
+      - name: Run Rspec
+        run: RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }} bundle exec rspec --profile --format documentation --order rand
+      - name: Publish code coverage
+        run: |
+          export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
+          ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
