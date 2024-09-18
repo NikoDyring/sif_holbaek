@@ -7,5 +7,5 @@ class PlayerProfile < ApplicationRecord
 
   has_and_belongs_to_many :teams
 
-  enum position:, { goalkeeper: 0, defence: 1, midfield: 2, forward: 3 }
+  enum :position, { goalkeeper: 0, defence: 1, midfield: 2, forward: 3 }
 end
