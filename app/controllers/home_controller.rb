@@ -2,6 +2,6 @@
 
 # Home Controller
 class HomeController < ApplicationController
-  def index;end
-  def landing;end
+  def index; end
+  def landing; end
 end
