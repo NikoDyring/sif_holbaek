@@ -23,10 +23,10 @@ SIF Holbæk runs on droplets:
 
 Application:
 
-* Ruby 3.3.0
-* Rails 7.1.3
+* Ruby 3.3.5
+* Rails 7.2.0
 * NodeJS 22.1.0
-* Bootstrap 5
+* Bootstrap 5.3
 
 Databases:
 
