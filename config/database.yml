@@ -16,8 +16,8 @@ test:
   database: sif_holbaek_test
   timeout: 5000
   host: localhost
-  username: postgres
-  password: postgres
+  username: deploy
+  password: P8jrGza#o3IldO
 
 production:
   <<: *default
