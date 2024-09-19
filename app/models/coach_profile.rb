@@ -5,5 +5,6 @@ class CoachProfile < ApplicationRecord
   belongs_to :user
   belongs_to :team
 
-  has_and_belongs_to_many :teams
+  has_many :coach_teams, dependent: :destroy
+  has_many :teams, through: :coach_teams
 end
