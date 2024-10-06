@@ -75,3 +75,5 @@ group :test do
   gem 'vcr'                                # Record HTTP interactions for testing
   gem 'webmock'                            # Stubs HTTP requests in tests
 end
+
+gem "sassc-rails", "~> 2.1"
