@@ -2,81 +2,78 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.0'
+ruby '3.3.5'
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
+# Core Rails functionality
+gem 'rails', '~> 7.2.0', '>= 7.2.1'
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
+# Authentication and Authorization
+gem 'cancancan' # Role-based access control
+gem 'devise' # User authentication
 
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+# Asset and CSS Bundling
+gem 'bootstrap', '~> 5.3', '>= 5.3.3' # Bootstrap for styling
+gem 'cssbundling-rails' # CSS bundling
+gem 'jsbundling-rails' # JavaScript bundling
+gem 'sprockets-rails' # Asset pipeline for Rails
 
-# Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '< 7'
+# Database
+gem 'pg', '~> 1.1' # PostgreSQL for Active Record
 
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
-gem 'jsbundling-rails'
+# Web server
+gem 'puma', '< 7' # Puma web server
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails'
+# Hotwire
+gem 'stimulus-rails'               # Hotwire Stimulus for modest JS framework
+gem 'turbo-rails'                  # Hotwire Turbo for SPA-like behavior
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+# API and JSON generation
+gem 'jbuilder' # Build JSON APIs with Jbuilder
 
-# Bundle and process CSS [https://github.com/rails/cssbundling-rails]
-gem 'cssbundling-rails'
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'jbuilder'
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Windows-specific dependencies
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+# Performance
+gem 'bootsnap', require: false # Reduces boot times through caching
 
-gem 'bootstrap', '~> 5.3', '>= 5.3.3'
-
+# Development and Test environments
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[mri windows]
-  gem 'rspec-rails'
+  gem 'debug', platforms: %i[mri windows]  # Debugging tools for Rails
+  gem 'rspec-rails'                        # RSpec for testing in Rails
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'web-console'
+  # Web console and deployment tools
+  gem 'bcrypt_pbkdf'                       # Password hashing algorithm
+  gem 'capistrano'                         # Automate deployment
+  gem 'capistrano3-puma', github: 'seuros/capistrano-puma' # Puma integration with Capistrano
+  gem 'capistrano-rails'                   # Rails-specific Capistrano tasks
+  gem 'capistrano-rbenv'                   # rbenv support for Capistrano
+  gem 'ed25519'                            # Ed25519 SSH key support for deployments
+  gem 'web-console'                        # Use console on exceptions pages
 
-  # Deployment
-  gem 'bcrypt_pbkdf'
-  gem 'capistrano'
-  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'ed25519'
-
-  # Rubocop
-  gem 'rubocop'
-  gem 'rubocop-capybara'
-  gem 'rubocop-factory_bot'
-  gem 'rubocop-rails'
-  gem 'rubocop-rspec'
-  gem 'rubocop-rspec_rails'
+  # RuboCop for linting and code quality
+  gem 'rubocop'                            # Base RuboCop
+  gem 'rubocop-capybara'                   # RuboCop extension for Capybara
+  gem 'rubocop-factory_bot'                # RuboCop extension for Factory Bot
+  gem 'rubocop-rails'                      # RuboCop extension for Rails
+  gem 'rubocop-rspec'                      # RuboCop extension for RSpec
+  gem 'rubocop-rspec_rails'                # RuboCop extension for RSpec in Rails
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'jsonapi-rspec'
-  gem 'rspec-sidekiq'
-  gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
-  gem 'simplecov'
-  gem 'simplecov_json_formatter'
-  gem 'vcr'
-  gem 'webmock'
+  # Testing tools and helpers
+  gem 'capybara'                           # System testing in Rails
+  gem 'factory_bot_rails'                  # Factories for testing
+  gem 'faker'                              # Generate fake data for testing
+  gem 'jsonapi-rspec'                      # RSpec matchers for JSON:API specs
+  gem 'rspec-sidekiq'                      # Test Sidekiq jobs with RSpec
+  gem 'selenium-webdriver'                 # Browser automation for system tests
+  gem 'shoulda-matchers'                   # Matchers for unit tests
+  gem 'simplecov'                          # Code coverage analysis
+  gem 'simplecov_json_formatter'           # JSON formatter for SimpleCov
+  gem 'vcr'                                # Record HTTP interactions for testing
+  gem 'webmock'                            # Stubs HTTP requests in tests
 end
+
+gem "sassc-rails", "~> 2.1"
